@@ -1,12 +1,22 @@
-#include <iotream>
+#include <iostream>
+#include <string>
 using namespace std;
-// 華視攝氏轉換
+
 int main() {
-    double fahrenheit;
-    double celsius
-    cout <<"請輸入華氏溫度:\n";
-    cin >> fahrenheit;
-    celsius = (fahrenheit - 32)/9*5;
-    cout <<"攝氏溫度是:" << celsius;
-    return 0;
-}
+    int score[10] = {85, 90, 60, 92, 100, 76, 50, 89, 84, 40};
+    int gradeCount[5] = {0};
+    for (int i = 0; i < 10; ++i) {
+        if (score[i] >= 90) {
+            gradeCount[0]++;
+        } else if (score[i] >= 80) {
+            gradeCount[1]++;
+        } else if (score[i] >= 70) {
+            gradeCount[2]++;
+        } else if (score[i] >= 60) {
+            gradeCount[3]++;
+        } else {
+            gradeCount[4]++;
+        }
+    }
+
+    cout << "A等人數:
